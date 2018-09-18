@@ -10,6 +10,13 @@ export default function () {
             },
             left: '6%'
         },
+        axisPointer: {
+            type: 'line',
+            lineStyle: {
+                type: 'dashed',
+                color: 'rgba(255,255,255,0.5)'
+            }
+        },
         tooltip: {
             trigger: 'axis',
             axisPointer: {
@@ -66,8 +73,8 @@ export default function () {
             name: '库存总量',
             type: 'line',
             smooth: true,
-            symbol: 'circle',
-            symbolSize: 5,
+            // symbol: 'circle',
+            symbolSize: 4,
             showSymbol: false,
             silent: true,
             barWidth: '50%',
@@ -93,10 +100,8 @@ export default function () {
                             color: 'rgba(255,255,255,0)'
                         }]
                     },
-                    // shadowBlur: 25,
                     shadowColor: '#6d77e4',
                     shadowOffsetX: 0,
-                    // shadowOffsetY: -10,
                     opacity: 0.8
                 }
             },
@@ -105,13 +110,12 @@ export default function () {
                     color: '#fff'
                 },
                 emphasis: {
-                    color: 'rgb(0,196,132)',
-                    borderColor: 'rgba(0,196,132,0.2)',
-                    // extraCssText: 'box-shadow: 8px 8px 8px rgba(0, 0, 0, 1);',
+                    color: 'rgba(255,255,255,0.7)',
+                    borderColor: 'rgba(255,255,255,0.2)',
                     borderWidth: 10
                 }
             },
-            data: [125, 182, 191, 134, 210, 240, 150, 125]
+            data: [125, 182, 191, 174, 710, 400, 450, 90]
         }]
     };
     return options;

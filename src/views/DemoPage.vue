@@ -19,7 +19,7 @@
     <!-- <button @click="updateData">Update Data</button> -->
     <main class="container">
         <div class="row">
-            <div class="card height flex-w-4">
+            <div class="card height flex-w-4 clear-bor">
                 <Title title="年度任务" class="clear-border"/>
                 <div class="ov-img">
                     <img src="../assets/overview.svg" v-show="theme">
@@ -46,7 +46,7 @@
                     <div class="desc flex-w-5">
                         <div>
                             <p class="item"><span><em class="point"></em>已签约</span><i class="icon"></i></p>
-                            <p class="text-view"><span>2,000 亿元</span><span>1,500 万 ㎡</span></p>
+                            <p class="text-view"><span>200 亿元</span><span>150 万 ㎡</span></p>
                         </div>
                         <div class="margin-tb">
                             <p class="item cyan"><span><em class="point point-cyan"></em>未逾期未签约</span></p>
@@ -59,7 +59,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card height flex-w-5">
+            <div class="card height flex-w-5 clear-bor">
                 <div class="bgcolor-between">
                     <div class="purple chart-con">
                         <div class="tit">
@@ -181,7 +181,7 @@ export default {
         // console.log(this.donutOptionData);
     },
     mounted() {
-        this.theme = false;
+        this.theme = true;
         this.areaChart = echarts.init(document.getElementById('areaChart'));
         window.addEventListener('resize', this.areaChart.resize);
         // this.areaChart.setOption(optionArea());

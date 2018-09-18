@@ -10,6 +10,13 @@ export default function () {
             },
             left: '6%'
         },
+        axisPointer: {
+            type: 'line',
+            lineStyle: {
+                type: 'dashed',
+                color: 'rgba(255,255,255,0.5)'
+            }
+        },
         tooltip: {
             trigger: 'axis',
             axisPointer: {
@@ -144,9 +151,8 @@ export default function () {
                     color: '#6D77E4'
                 },
                 emphasis: {
-                    color: 'rgb(0,196,132)',
-                    borderColor: 'rgba(0,196,132,0.2)',
-                    // extraCssText: 'box-shadow: 8px 8px 8px rgba(0, 0, 0, 1);',
+                    color: 'rgba(255,255,255,0.7)',
+                    borderColor: 'rgba(255,255,255,0.2)',
                     borderWidth: 10
                 }
             },

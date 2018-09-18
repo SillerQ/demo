@@ -22,6 +22,7 @@
     -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;
     font-size: 10px;
+    min-height: 100vh;
     // background-color: black;
 }
 #nav {
