@@ -92,7 +92,7 @@ export default function () {
                 normal: {
                     show: true,
                     color: '#EBEFF5',
-                    opacity: 0.6
+                    opacity: 0.1
                 }
             },
             barWidth: '50%',
@@ -126,10 +126,10 @@ export default function () {
                         y2: 1,
                         colorStops: [{
                             offset: 0,
-                            color: 'rgba(112,122,229,.6)'
+                            color: 'rgba(112,122,229,.7)'
                         }, {
                             offset: 1,
-                            color: 'rgba(112,122,229,0)'
+                            color: 'rgba(255, 255, 255, 0.0001)'
                         }]
                     },
                     // shadowBlur: 25,

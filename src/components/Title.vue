@@ -15,7 +15,7 @@
                 <li><a>至今</a></li>
             </ul>
         </a>
-        
+
     </div>
 </template>
 
@@ -91,7 +91,7 @@ export default {
         border: 1px solid rgba(191, 200, 214, 0.14);
         box-shadow: 0px 2px 3px rgba(191, 200, 214, 0.132133),
             0px 1px 3px rgba(191, 200, 214, 0.215438);
-        z-index: 999;    
+        z-index: 999;
         li {
             display: block;
             a {

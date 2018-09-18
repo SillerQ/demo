@@ -14,34 +14,17 @@ export default function () {
             trigger: 'axis',
             axisPointer: {
                 lineStyle: {
-                    color: '#57617B'
+                    color: '#e4eaf5'
                 }
-            },
-            formatter(prams) {
-                if (prams[0].data === 20) {
-                    return '完成量%';
-                }
-                return `完成量${100}%`;
             }
         },
         legend: {
-            show: false,
-            icon: 'rect',
-            itemWidth: 14,
-            itemHeight: 5,
-            itemGap: 13,
-            data: ['移动', '电信', '联通'],
-            right: '4%',
-            textStyle: {
-                fontSize: 12,
-                color: '#292f39'
-            }
+            show: false
         },
         grid: {
-            top: '0%',
-            left: '-0%',
+            left: '-60%',
             right: '0%',
-            bottom: '-50%',
+            bottom: '0%',
             containLabel: true
         },
         xAxis: [{
@@ -56,52 +39,31 @@ export default function () {
             data: ['13:00', '13:05', '13:10', '13:15', '13:20', '13:25', '13:30', '13:35']
         }],
         yAxis: [{
+            show: false,
             type: 'value',
             name: '单位（%）',
             axisTick: {
                 show: false
             },
             axisLine: {
-                show: false,
                 lineStyle: {
-                    color: '#57617B',
-                    opacity: 0
+                    color: '#57617B'
                 }
             },
             axisLabel: {
-                // margin: 50,
-                show: false,
+                margin: 10,
                 textStyle: {
-                    fontSize: 14,
-                    color: 'pink'
-                    // align: 'right',
-                    // margin: 10
+                    fontSize: 14
                 }
             },
             splitLine: {
-                show: false,
                 lineStyle: {
                     color: '#6d77e4'
                 }
             }
         }],
         series: [{
-            name: '占位背景',
-            type: 'bar',
-            itemStyle: {
-                normal: {
-                    show: true,
-                    color: '#EBEFF5',
-                    opacity: 0.6
-                }
-            },
-            barWidth: '50%',
-            barGap: 0,
-            zlevel: 9,
-            data: [250, 250, 250, 250, 250, 250, 250, 250],
-            animation: false
-        }, {
-            name: '完成量',
+            name: '库存总量',
             type: 'line',
             smooth: true,
             symbol: 'circle',
@@ -110,10 +72,9 @@ export default function () {
             silent: true,
             barWidth: '50%',
             barGap: 0,
-            zlevel: 11,
             lineStyle: {
                 normal: {
-                    width: 4
+                    width: 3
                 }
             },
             areaStyle: {
@@ -126,10 +87,10 @@ export default function () {
                         y2: 1,
                         colorStops: [{
                             offset: 0,
-                            color: 'rgba(112,122,229,.6)'
+                            color: 'rgba(255,255,255,.6)'
                         }, {
                             offset: 1,
-                            color: 'rgba(112,122,229,0)'
+                            color: 'rgba(255,255,255,0)'
                         }]
                     },
                     // shadowBlur: 25,
@@ -141,7 +102,7 @@ export default function () {
             },
             itemStyle: {
                 normal: {
-                    color: '#6D77E4'
+                    color: '#fff'
                 },
                 emphasis: {
                     color: 'rgb(0,196,132)',
@@ -150,7 +111,7 @@ export default function () {
                     borderWidth: 10
                 }
             },
-            data: [165, 170, 172, 174, 180, 188, 192, 198]
+            data: [125, 182, 191, 134, 210, 240, 150, 125]
         }]
     };
     return options;

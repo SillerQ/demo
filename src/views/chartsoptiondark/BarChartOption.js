@@ -47,16 +47,16 @@ export default function () {
             axisLine: {
                 show: true,
                 lineStyle: {
-                    color: '#D8DDDE',
+                    color: '#68728C',
                     width: 2
                 }
             },
             axisLabel: {
                 inside: false,
                 textStyle: {
-                    color: '#68728C',
+                    color: 'rgba(216,221,222,.8)',
                     fontWeight: 'normal',
-                    fontSize: '12'
+                    fontSize: '14'
                 }
                 // formatter:function(val){
                 //     return val.split("").join("\n")
@@ -91,18 +91,18 @@ export default function () {
             axisLine: {
                 show: false,
                 lineStyle: {
-                    color: '#32346c'
+                    color: '#D8DDDE'
                 }
             },
             splitLine: {
                 show: true,
                 lineStyle: {
-                    color: '#F1F3F5 '
+                    color: 'rgba(216,221,222,.2)'
                 }
             },
             axisLabel: {
                 textStyle: {
-                    color: '#68728C',
+                    color: 'rgba(216,221,222,.8)',
                     fontWeight: 'normal',
                     fontSize: '12'
                 }
@@ -141,7 +141,7 @@ export default function () {
             zlevel: 1,
             itemStyle: {
                 normal: {
-                    color: '#EBEFF5',
+                    color: 'rgba(235, 239, 245, 0.1)',
                     barBorderRadius: 50,
                     borderWidth: 0,
                     shadowBlur: {

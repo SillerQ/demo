@@ -21,7 +21,10 @@
         <div class="row">
             <div class="card height flex-w-4">
                 <Title title="年度任务" class="clear-border"/>
-                <div class="ov-img"><img src="../assets/overview.svg"></div>
+                <div class="ov-img">
+                    <img src="../assets/overview.svg" v-show="theme">
+                    <img src="../assets/ov-dark.svg" v-show="!theme">
+                    </div>
                 <div class="chart-position">
                     <div id="areaChart" style="width: 100%; height:260px; margin: auto"></div>
                 </div>
@@ -88,19 +91,18 @@
 // @ is an alias to /src
 import Title from '@/components/Title.vue';
 import './demo.less';
-// import Chart from '@/components/Chart.vue';
 import Table from '@/components/Table.vue';
 import echarts from 'echarts';
-// import optionLine from './LineChartOption';
-// import optionDonut from './DonutChartOption';
 import optionArea from './chartsoption/AreaChartOption';
 import optionPie from './chartsoption/PieChartOption';
 import optionBar from './chartsoption/BarChartOption';
 import optionStackBar from './chartsoption/StackBarChartOption';
 import optionAreaSip from './chartsoption/AreaSipChartOption';
-// import optionAreaSip from './AreaSipChartOption';
-// import optionBar from './BarChartOption';
-// import optionStackBar from './StackBarChartOption';
+import optionAreaDark from './chartsoptiondark/AreaChartOption';
+import optionPieDark from './chartsoptiondark/PieChartOption';
+import optionBarDark from './chartsoptiondark/BarChartOption';
+import optionStackBarDark from './chartsoptiondark/StackBarChartOption';
+import optionAreaSipDark from './chartsoptiondark/AreaSipChartOption';
 
 export default {
     name: 'demopage',
@@ -158,7 +160,7 @@ export default {
                     d: 897
                 }
             ],
-            theme: true
+            theme: ''
         };
     },
     created() {
@@ -179,31 +181,36 @@ export default {
         // console.log(this.donutOptionData);
     },
     mounted() {
+        this.theme = false;
         this.areaChart = echarts.init(document.getElementById('areaChart'));
         window.addEventListener('resize', this.areaChart.resize);
-        this.areaChart.setOption(optionArea());
+        // this.areaChart.setOption(optionArea());
 
         this.pieChart = echarts.init(document.getElementById('pieChart'));
         window.addEventListener('resize', this.pieChart.resize);
-        this.pieChart.setOption(optionPie());
+        // this.pieChart.setOption(optionPie());
 
         this.barChart = echarts.init(document.getElementById('barChart'));
         window.addEventListener('resize', this.barChart.resize);
-        this.barChart.setOption(optionBar());
+        // this.barChart.setOption(optionBar());
 
         this.stackBarChart = echarts.init(
             document.getElementById('stackBarChart')
         );
         window.addEventListener('resize', this.stackBarChart.resize);
-        this.stackBarChart.setOption(optionStackBar());
+        // this.stackBarChart.setOption(optionStackBar());
 
-        this.areaSipChart1 = echarts.init(document.getElementById('chartSipArea1'));
+        this.areaSipChart1 = echarts.init(
+            document.getElementById('chartSipArea1')
+        );
         window.addEventListener('resize', this.areaSipChart1.resize);
-        this.areaSipChart1.setOption(optionAreaSip());
+        // this.areaSipChart1.setOption(optionAreaSip());
 
-        this.areaSipChart2 = echarts.init(document.getElementById('chartSipArea2'));
+        this.areaSipChart2 = echarts.init(
+            document.getElementById('chartSipArea2')
+        );
         window.addEventListener('resize', this.areaSipChart2.resize);
-        this.areaSipChart2.setOption(optionAreaSip());
+        // this.areaSipChart2.setOption(optionAreaSip());
     },
     components: {
         Title,
@@ -214,7 +221,26 @@ export default {
             this.theme = !this.theme;
         }
     },
-    watch: {}
+    watch: {
+        theme(theme) {
+            console.log(theme);
+            if (theme) {
+                this.areaChart.setOption(optionArea());
+                this.pieChart.setOption(optionPie());
+                this.barChart.setOption(optionBar());
+                this.stackBarChart.setOption(optionStackBar());
+                this.areaSipChart1.setOption(optionAreaSip());
+                this.areaSipChart2.setOption(optionAreaSip());
+            } else {
+                this.areaChart.setOption(optionAreaDark());
+                this.pieChart.setOption(optionPieDark());
+                this.barChart.setOption(optionBarDark());
+                this.stackBarChart.setOption(optionStackBarDark());
+                this.areaSipChart1.setOption(optionAreaSipDark());
+                this.areaSipChart2.setOption(optionAreaSipDark());
+            }
+        }
+    }
 };
 </script>
 

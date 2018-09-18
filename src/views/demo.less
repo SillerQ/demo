@@ -9,8 +9,37 @@
 .dark {
     background-color: #474d65;
     color: #fff;
+    .header {
+        .right {
+            .user {
+                color: #ACB0B6;
+            }
+        }
+    }
     .card {
         background-color: #3f4457;
+        box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+        border: 1px solid #3f4457;
+    }
+    .title-box {
+        box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+        .title {
+            color: rgba(255, 255, 255, 0.77);
+        }
+        .select {
+            color: #81868D;
+        }
+    }
+    .table-view {
+        .tit {
+            color: #81868d;
+        }
+        .list:nth-child(2n)>div {
+            background-color: #474A5C;
+        }
+    }
+    .clear-border {
+        box-shadow: none;
     }
 }
 
@@ -224,7 +253,7 @@
     .text-view {
         display: flex;
         justify-content: space-between;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         margin-top: 16px;
     }
     .cyan {
@@ -271,7 +300,7 @@
             text-align: left;
             padding: 0 2em;
             p {
-                border-bottom: 1px solid #ffffff;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.4);
                 padding: 1.4em 0;
                 font-size: 1.2rem;
                 margin-bottom: 1.4em;
@@ -279,7 +308,7 @@
             span {
                 font-weight: 600;
             }
-            .arrow{
+            .arrow {
                 display: inline-block;
                 width: 20px;
                 height: 20px;

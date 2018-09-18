@@ -3,9 +3,7 @@ import echarts from 'echarts';
 export default function () {
     const options = {
         legend: {
-            show: false,
-            data: ['女生', '男生']
-
+            show: false
         },
         tooltip: {
             trigger: 'axis',
@@ -54,7 +52,7 @@ export default function () {
             }
         }],
         series: [{
-            name: '男生',
+            name: '已签约',
             type: 'bar',
             stack: '总量',
             barWidth: '24%',
@@ -71,9 +69,9 @@ export default function () {
                     borderWidth: 0
                 }
             },
-            data: [10]
+            data: [19]
         }, {
-            name: '女生',
+            name: '未逾期未签约',
             type: 'bar',
             stack: '总量',
             barWidth: '24%',
@@ -93,7 +91,7 @@ export default function () {
             data: [12]
         },
         {
-            name: '人妖',
+            name: '逾期未签约',
             type: 'bar',
             stack: '总量',
             barWidth: '24%',
@@ -110,7 +108,7 @@ export default function () {
                     borderWidth: 0
                 }
             },
-            data: [16]
+            data: [5]
         }
         ]
     };
