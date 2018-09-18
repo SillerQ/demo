@@ -6,6 +6,7 @@ import Demo from './views/DemoPage.vue';
 Vue.use(Router);
 
 export default new Router({
+    mode: 'history',
     routes: [
         {
             path: '/',

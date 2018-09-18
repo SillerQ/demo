@@ -194,21 +194,15 @@ export default {
         window.addEventListener('resize', this.barChart.resize);
         // this.barChart.setOption(optionBar());
 
-        this.stackBarChart = echarts.init(
-            document.getElementById('stackBarChart')
-        );
+        this.stackBarChart = echarts.init(document.getElementById('stackBarChart'));
         window.addEventListener('resize', this.stackBarChart.resize);
         // this.stackBarChart.setOption(optionStackBar());
 
-        this.areaSipChart1 = echarts.init(
-            document.getElementById('chartSipArea1')
-        );
+        this.areaSipChart1 = echarts.init(document.getElementById('chartSipArea1'));
         window.addEventListener('resize', this.areaSipChart1.resize);
         // this.areaSipChart1.setOption(optionAreaSip());
 
-        this.areaSipChart2 = echarts.init(
-            document.getElementById('chartSipArea2')
-        );
+        this.areaSipChart2 = echarts.init(document.getElementById('chartSipArea2'));
         window.addEventListener('resize', this.areaSipChart2.resize);
         // this.areaSipChart2.setOption(optionAreaSip());
     },

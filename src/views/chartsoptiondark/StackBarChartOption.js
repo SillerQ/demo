@@ -52,64 +52,64 @@ export default function () {
             }
         }],
         series: [{
-                name: '已签约',
-                type: 'bar',
-                stack: '总量',
-                barWidth: '24%',
-                itemStyle: {
-                    normal: {
-                        show: true,
-                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                            offset: 0,
-                            color: '#6D77E4'
-                        }, {
-                            offset: 1,
-                            color: '#A0A6EE'
-                        }]),
-                        borderWidth: 0
-                    }
-                },
-                data: [19]
-            }, {
-                name: '未逾期未签约',
-                type: 'bar',
-                stack: '总量',
-                barWidth: '24%',
-                itemStyle: {
-                    normal: {
-                        show: true,
-                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                            offset: 0,
-                            color: '#7ADDF7'
-                        }, {
-                            offset: 1,
-                            color: '#57CFEE'
-                        }]),
-                        borderWidth: 0
-                    }
-                },
-                data: [12]
+            name: '已签约',
+            type: 'bar',
+            stack: '总量',
+            barWidth: '24%',
+            itemStyle: {
+                normal: {
+                    show: true,
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                        offset: 0,
+                        color: '#6D77E4'
+                    }, {
+                        offset: 1,
+                        color: '#A0A6EE'
+                    }]),
+                    borderWidth: 0
+                }
             },
-            {
-                name: '逾期未签约',
-                type: 'bar',
-                stack: '总量',
-                barWidth: '24%',
-                itemStyle: {
-                    normal: {
-                        show: true,
-                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                            offset: 0,
-                            color: '#FBBE77'
-                        }, {
-                            offset: 1,
-                            color: '#FFCD92'
-                        }]),
-                        borderWidth: 0
-                    }
-                },
-                data: [5]
-            }
+            data: [19]
+        }, {
+            name: '未逾期未签约',
+            type: 'bar',
+            stack: '总量',
+            barWidth: '24%',
+            itemStyle: {
+                normal: {
+                    show: true,
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                        offset: 0,
+                        color: '#7ADDF7'
+                    }, {
+                        offset: 1,
+                        color: '#57CFEE'
+                    }]),
+                    borderWidth: 0
+                }
+            },
+            data: [12]
+        },
+        {
+            name: '逾期未签约',
+            type: 'bar',
+            stack: '总量',
+            barWidth: '24%',
+            itemStyle: {
+                normal: {
+                    show: true,
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                        offset: 0,
+                        color: '#FBBE77'
+                    }, {
+                        offset: 1,
+                        color: '#FFCD92'
+                    }]),
+                    borderWidth: 0
+                }
+            },
+            data: [5]
+        }
         ]
     };
     return options;
